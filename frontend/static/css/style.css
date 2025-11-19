@@ -1,0 +1,116 @@
+/* Tail Tailwind 配置 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定义工具类 */
+@layer utilities {
+  .msg-appear { 
+    animation: fadeIn 0.25s ease-out; 
+  }
+  
+  .typing-indicator { 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 4px; 
+  }
+  
+  .typing-indicator span {
+    width: 8px; 
+    height: 8px; 
+    border-radius: 50%;
+    background-color: #9CA3AF; 
+    animation: typing 1.2s infinite ease-in-out both;
+  }
+  
+  .typing-indicator span:nth-child(1) { 
+    animation-delay: -0.32s; 
+  }
+  
+  .typing-indicator span:nth-child(2) { 
+    animation-delay: -0.16s; 
+  }
+}
+
+/* 自定义动画 */
+@keyframes fadeIn { 
+  from {
+    opacity: 0; 
+    transform: translateY(8px);
+  } 
+  to {
+    opacity: 1; 
+    transform: translateY(0);
+  } 
+}
+
+@keyframes typing { 
+  0% {
+    transform: translateY(0);
+  } 
+  28% {
+    transform: translateY(-5px);
+  } 
+  44% {
+    transform: translateY(0);
+  } 
+}
+
+/* 自定义主题 */
+:root {
+  --primary-color: #3B82F6;
+  --secondary-color: #d4e2fd;
+  --neutral-color: #F9FAFB;
+}
+
+/* 全局样式 */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* 聊天气泡样式 */
+.user-bubble {
+  @apply bg-[var(--primary-color)] text-white rounded-lg rounded-tr-none px-4 py-3 max-w-[85%];
+}
+
+.bot-bubble {
+  @apply bg-[var(--neutral-color)] rounded rounded-lg rounded-tl-none px-4 py-3 max-w-[85%];
+}
+
+/* 加粗文本样式 */
+.bot-bubble strong {
+  @apply font-bold text-gray-900;
+}
+
+/* 预设问题按钮样式 */
+.preset-question-btn {
+  @apply bg-[var(--secondary-color)] text-white !important;
+  @apply hover:bg-[var(--primary-color)] transition-colors;
+}
+
+/* 进度计数器样式 */
+.progress-counter {
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.progress-counter-blue {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.progress-counter-yellow {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.progress-counter-green {
+  background-color: #dcfce7;
+  color: #16a34a;
+}

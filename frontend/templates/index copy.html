@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI小助手</title>
+
+  <!-- Tailwind（开发阶段可用；生产请改本地构建版） -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- 自定义样式 -->
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-3xl mx-auto p-4 md:p-6 bg-white shadow-lg rounded-xl my-6">
+    <div class="border-b border-gray-200 pb-4 mb-4">
+      <h1 class="text-[clamp(1.2rem,3vw,1.8rem)] font-bold text-gray-800 flex items-center">
+        <i class="fa fa-comments-o text-[var(--primary-color)] mr-2"></i> AI小助手
+      </h1>
+      <p class="text-gray-500 text-sm mt-1">基于知识库的智能问答小助手</p>
+    </div>
+
+    <!-- 预设问题 -->
+    <!-- <div class="mb-4 overflow-x-auto pb-2">
+      <div class="flex gap-2 min-w-max">
+        {% for q in preset_questions %}
+          <button class="preset-question-btn px-3 py-1.5 text-sm rounded-full"
+                  data-question="{{ q }}">{{ q }}</button>
+        {% endfor %}
+      </div>
+    </div> -->
+
+    <!-- 聊天区域 -->
+    <div id="chat-container" class="h-[500px] overflow-y-auto p-2 space-y-4 mb-4">
+      <div class="flex items-start msg-appear">
+        <div class="bg-[var(--neutral-color)] rounded-lg flex-shrink-0 w-8 h-8 rounded-full overflow-hidden mr-3">
+          <img src="https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/7284d59b32af4353be75b6564c5b7555.png~tplv-a9rns2rl98-24:720:720.png?rcl=2025110315573620C298E244E189A6096B&rk3s=8e244e95&rrcfp=8a172a1a&x-expires=1762761456&x-signature=vpbdxcbzrcKzmJjb8dQ0kK6RTh4%3D" alt="AI助手" class="w-full h-full object-cover">
+        </div>
+        <div class="bg-[var(--neutral-color)] rounded-lg rounded-tl-none px-4 py-3 max-w-[85%]">
+          <p class="text-gray-800">您好，我是您的AI小助手！专注于查询教学质量相关的数据，若有任何关于教学质量的问题，欢迎随时向我提问哦！</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 推荐问题 -->
+    <div class="mb-4">
+      <h3 class="text-sm font-medium text-gray-500 mb-2 flex items-center">
+        <i class="fa fa-lightbulb-o text-yellow-500 mr-1"></i> 你可能想问
+      </h3>
+      <div id="recommendations-container" class="space-y-2">
+        <!-- 推荐问题将通过JavaScript动态添加 -->
+      </div>
+    </div>
+
+    <!-- 输入 -->
+    <div class="flex gap-2">
+      <input id="user-input" type="text" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-color)]/50 focus:border-[var(--primary-color)] outline-none transition-all"
+             placeholder="请输入查询内容...">
+      <button id="send-btn" class="bg-[var(--primary-color)] hover:bg-[var(--primary-color)]/90 text-white px-5 py-2 rounded-lg transition-colors flex items-center">
+        <i class="fa fa-paper-plane mr-1"></i> 发送
+      </button>
+      <button id="abort-btn" class="hidden bg-gray-500 hover:bg-gray-600 text-white px-3 py-2 rounded-lg transition-colors flex items-center">
+        <i class="fa fa-stop mr-1"></i> 中止
+      </button>
+    </div>
+  </div>
+
+
+  <!-- JavaScript -->
+  <script src="/static/js/main.js"></script>
+</body>
+</html>
