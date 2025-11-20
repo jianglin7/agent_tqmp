@@ -1,0 +1,23 @@
+{
+  "name": "RAGFLOW_OF_TQMP",
+  "version": "1.0.0",
+  "description": "基于FastAPI和RagFlow的AI助手应用，提供智能问答功能，支持进度显示和自定义头像。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jianglin7/agent_tqmp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jianglin7/agent_tqmp/issues"
+  },
+  "homepage": "https://github.com/jianglin7/agent_tqmp#readme",
+  "dependencies": {
+    "tailwindcss": "^4.1.17"
+  }
+}
