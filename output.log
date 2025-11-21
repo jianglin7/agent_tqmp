@@ -1,19 +1,235 @@
 nohup: 忽略输入
 INFO:     Will watch for changes in these directories: ['/root/jianglp/RAGFLOW_OF_TQMP']
 INFO:     Uvicorn running on http://0.0.0.0:8778 (Press CTRL+C to quit)
-INFO:     Started reloader process [3867866] using StatReload
-INFO:     Started server process [3867868]
+INFO:     Started reloader process [4035442] using StatReload
+INFO:     Started server process [4035444]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     10.185.2.178:59884 - "GET / HTTP/1.1" 200 OK
-INFO:     10.185.2.178:59884 - "GET /static/css/fontawesome.min.css HTTP/1.1" 304 Not Modified
-INFO:     10.185.2.178:59933 - "GET / HTTP/1.1" 200 OK
-INFO:     10.185.2.178:63356 - "GET / HTTP/1.1" 200 OK
-INFO:     10.185.2.178:63356 - "GET /static/css/fontawesome.min.css HTTP/1.1" 200 OK
-INFO:     10.185.2.178:63355 - "GET /static/css/style.css HTTP/1.1" 200 OK
-INFO:     10.185.2.178:63357 - "GET /static/images/robot.png HTTP/1.1" 200 OK
-INFO:     10.185.2.178:63358 - "GET /static/js/main.js HTTP/1.1" 200 OK
-INFO:     10.185.2.178:63357 - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 OK
-INFO:     10.185.2.178:63357 - "POST /chat HTTP/1.1" 200 OK
-INFO:     10.185.2.178:63897 - "GET / HTTP/1.1" 200 OK
-INFO:     10.185.2.178:56427 - "POST /chat HTTP/1.1" 200 OK
+INFO:     10.185.2.178:64350 - "GET / HTTP/1.1" 200 OK
+INFO:     10.185.2.178:64350 - "GET /static/css/tailwind.min.css HTTP/1.1" 304 Not Modified
+INFO:     10.185.2.178:64352 - "GET /static/js/main.js HTTP/1.1" 304 Not Modified
+INFO:     10.185.2.178:64351 - "GET /static/css/fontawesome.min.css HTTP/1.1" 304 Not Modified
+INFO:     10.185.2.178:64352 - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 Not Modified
+INFO:     10.185.2.178:64352 - "GET / HTTP/1.1" 200 OK
+INFO:     10.185.2.178:50652 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     10.185.2.178:57940 - "GET / HTTP/1.1" 200 OK
+INFO:     10.185.2.178:57940 - "GET /static/css/tailwind.min.css HTTP/1.1" 304 Not Modified
+INFO:     10.185.2.178:57939 - "GET /static/css/fontawesome.min.css HTTP/1.1" 304 Not Modified
+INFO:     10.185.2.178:57945 - "GET /static/images/robot.png HTTP/1.1" 304 Not Modified
+INFO:     10.185.2.178:57944 - "GET /static/css/style.css HTTP/1.1" 304 Not Modified
+INFO:     10.185.2.178:57945 - "GET /static/js/main.js HTTP/1.1" 304 Not Modified
+INFO:     10.185.2.178:57944 - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 Not Modified
+INFO:     10.185.2.178:52027 - "POST /chat HTTP/1.1" 200 OK
+INFO:     10.185.2.178:52181 - "POST /chat HTTP/1.1" 200 OK
+INFO:     10.185.2.178:52335 - "GET / HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+  |     result = await app(  # type: ignore[func-returns-value]
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+  |     return await self.app(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/fastapi/applications.py", line 1054, in __call__
+  |     await super().__call__(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/applications.py", line 123, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/errors.py", line 186, in __call__
+  |     raise exc
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/errors.py", line 164, in __call__
+  |     await self.app(scope, receive, _send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/cors.py", line 91, in __call__
+  |     await self.simple_response(scope, receive, send, request_headers=headers)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+  |     await self.app(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+  |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/routing.py", line 758, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/routing.py", line 778, in app
+  |     await route.handle(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/routing.py", line 299, in handle
+  |     await self.app(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/routing.py", line 79, in app
+  |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/routing.py", line 77, in app
+  |     await response(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/responses.py", line 264, in __call__
+  |     await wrap(partial(self.listen_for_disconnect, receive))
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 781, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/responses.py", line 260, in wrap
+    |     await func()
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/responses.py", line 252, in stream_response
+    |     await send({"type": "http.response.body", "body": chunk, "more_body": True})
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/cors.py", line 152, in send
+    |     await send(message)
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/errors.py", line 161, in _send
+    |     await send(message)
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 461, in send
+    |     raise ClientDisconnected
+    | uvicorn.protocols.utils.ClientDisconnected
+    +------------------------------------
+INFO:     10.185.2.178:52335 - "POST /chat HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+  |     result = await app(  # type: ignore[func-returns-value]
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+  |     return await self.app(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/fastapi/applications.py", line 1054, in __call__
+  |     await super().__call__(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/applications.py", line 123, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/errors.py", line 186, in __call__
+  |     raise exc
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/errors.py", line 164, in __call__
+  |     await self.app(scope, receive, _send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/cors.py", line 91, in __call__
+  |     await self.simple_response(scope, receive, send, request_headers=headers)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+  |     await self.app(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+  |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/routing.py", line 758, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/routing.py", line 778, in app
+  |     await route.handle(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/routing.py", line 299, in handle
+  |     await self.app(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/routing.py", line 79, in app
+  |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/routing.py", line 77, in app
+  |     await response(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/responses.py", line 264, in __call__
+  |     await wrap(partial(self.listen_for_disconnect, receive))
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 781, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/responses.py", line 260, in wrap
+    |     await func()
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/responses.py", line 252, in stream_response
+    |     await send({"type": "http.response.body", "body": chunk, "more_body": True})
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/cors.py", line 152, in send
+    |     await send(message)
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/errors.py", line 161, in _send
+    |     await send(message)
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 461, in send
+    |     raise ClientDisconnected
+    | uvicorn.protocols.utils.ClientDisconnected
+    +------------------------------------
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+  |     result = await app(  # type: ignore[func-returns-value]
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+  |     return await self.app(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/fastapi/applications.py", line 1054, in __call__
+  |     await super().__call__(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/applications.py", line 123, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/errors.py", line 186, in __call__
+  |     raise exc
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/errors.py", line 164, in __call__
+  |     await self.app(scope, receive, _send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/cors.py", line 91, in __call__
+  |     await self.simple_response(scope, receive, send, request_headers=headers)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+  |     await self.app(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+  |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/routing.py", line 758, in __call__
+  |     await self.middleware_stack(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/routing.py", line 778, in app
+  |     await route.handle(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/routing.py", line 299, in handle
+  |     await self.app(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/routing.py", line 79, in app
+  |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+  |     raise exc
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+  |     await app(scope, receive, sender)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/routing.py", line 77, in app
+  |     await response(scope, receive, send)
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/responses.py", line 264, in __call__
+  |     await wrap(partial(self.listen_for_disconnect, receive))
+  |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 781, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/responses.py", line 260, in wrap
+    |     await func()
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/responses.py", line 252, in stream_response
+    |     await send({"type": "http.response.body", "body": chunk, "more_body": True})
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/_exception_handler.py", line 50, in sender
+    |     await send(message)
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/cors.py", line 152, in send
+    |     await send(message)
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/starlette/middleware/errors.py", line 161, in _send
+    |     await send(message)
+    |   File "/root/anaconda3/envs/ragflow_fastapi_env/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 461, in send
+    |     raise ClientDisconnected
+    | uvicorn.protocols.utils.ClientDisconnected
+    +------------------------------------
+INFO:     10.185.2.178:52888 - "GET / HTTP/1.1" 200 OK
+INFO:     10.185.2.178:52886 - "POST /chat HTTP/1.1" 200 OK
+============================================================
+AI助手应用 - 简化启动脚本
+============================================================
+此脚本将自动使用开发环境配置启动应用
+无需手动设置环境变量
+============================================================
+当前目录: /root/jianglp/RAGFLOW_OF_TQMP
+✓ 所有依赖包已安装
+
+已设置环境变量：
+  FASTAPI_ENV = dev
+  SECRET_KEY = dev-key-for-development-only
+
+============================================================
+正在启动AI助手应用...
+访问地址: http://0.0.0.1:8778
+API文档: http://0.0.0.1:8778/docs
+按 Ctrl+C 停止应用
+============================================================
+
+✗ 应用启动失败: Command '['/root/anaconda3/envs/ragflow_fastapi_env/bin/python3', '-m', 'uvicorn', 'main:app', '--host', '0.0.0.0', '--port', '8778', '--reload']' died with <Signals.SIGKILL: 9>.
+
+请尝试手动启动：
+  cd /root/jianglp/RAGFLOW_OF_TQMP
+  /root/anaconda3/envs/ragflow_fastapi_env/bin/python3 -m uvicorn main:app --host 0.0.0.0 --port 8778 --reload

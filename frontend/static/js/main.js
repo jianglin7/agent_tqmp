@@ -88,7 +88,7 @@
                 data-question="${esc(question)}">
           <div class="flex items-start">
             <div class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-2 mt-0.25">
-              <i class="fa fa-lightbulb-o text-xs"></i>
+              <i class="fa fa-lightbulb-o text-yellow-500 mr-1"></i>
             </div>
             <p class="text-gray-700">${esc(question)}</p>
           </div>
@@ -180,21 +180,19 @@
     localStorage.setItem("rag_session_id", sessionId);
   }
 
-  // ===== UI 辅助 =====
   function appendUserBubble(text) {
-      var html =
-        '<div class="flex items-start justify-end msg-appear">' + // 注意：原代码多了一个"justify"，去掉重复的
-          // 核心改造：补充内边距、最大宽度、边角样式、文字颜色
-          '<div class="bg-[var(--secondary-color)] text-black rounded-lg rounded-tr-none px-4 py-3 max-w-[85%]">' +
-            "<p>" + esc(text) + "</p>" +
-          "</div>" +
-          '<div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 ml-3">' + // 修正："items items-center"重复，去掉一个
-            '<i class="fa fa-user"></i>' +
-          "</div>" +
-        "</div>";
-      chatContainer.insertAdjacentHTML("beforeend", html);
-      chatContainer.scrollTop = chatContainer.scrollHeight;
-    }
+    var html =
+      '<div class="flex items-start justify-end msg-appear mb-3">' + 
+        '<div class="bg-[var(--secondary-color)] text-black rounded-lg rounded-tr-none px-4 py-3 max-w-[85%] shadow-sm">' +
+          "<p>" + esc(text) + "</p>" +
+        "</div>" +
+        '<div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 ml-3">' + 
+          '<i class="fa fa-user"></i>' +
+        "</div>" +
+      "</div>";
+    chatContainer.insertAdjacentHTML("beforeend", html);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+  }
 
 
   function appendBotContainer() {
@@ -273,7 +271,7 @@
     var counterElement = document.getElementById("progress-counter-element");
     if (!counterElement) return;
     
-    // 随机增加1-3%，但不超过95%
+    // 随机增加1-3%，但不超过99%
     _progressCounter = Math.min(99, _progressCounter + Math.floor(Math.random() * 3) + 1);
     counterElement.textContent = _progressCounter + "%";
     

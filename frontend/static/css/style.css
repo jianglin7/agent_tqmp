@@ -1,7 +1,7 @@
-/* Tail Tailwind 配置 */
+/* Tail Tailwind 配置
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 /* 自定义工具类 */
 @layer utilities {

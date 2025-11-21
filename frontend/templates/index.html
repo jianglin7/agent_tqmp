@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>AI小助手</title>
 
   <!-- 外部资源 -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+   
+  <link rel="stylesheet" href="/static/css/tailwind.min.css">
+
 
   <link href="static/css/fontawesome.min.css" rel="stylesheet">
 
-  
-  <!-- 自定义样式 -->
   <link rel="stylesheet" href="/static/css/style.css">
+
+
   <style>
     /* 根元素字体大小：基于视口宽度动态调整（1vw = 视口宽度的1%） */
     html {
@@ -62,7 +66,7 @@
     <!-- 推荐问题区域：辅助文字自适应 -->
     <div class="p-4 border-t border-gray-100 flex-shrink-0 bg-gray-50">
       <h3 class="text-sm font-medium text-gray-500 mb-2 flex items-center text-[clamp(0.875rem,1.2vw,1rem)]">
-        <i class="fa fa-lightbulb-o text-yellow-500 mr-1"></i> 你可能想问
+        <i class="fa fa-arrow-right text-yellow-500 mr-1"></i> 你可能想问
       </h3>
       <div id="recommendations-container" class="flex gap-2 flex-wrap">
         <button class="preset-question-btn px-3 py-1.5 rounded-full text-[clamp(0.8rem,1vw,0.9375rem)]">有哪些督导评价任务即将在7天内截止？</button>
